@@ -1,0 +1,22 @@
+Insert into CUSTOMER values(1,'John');
+Insert into CUSTOMER values(2,'Edward');
+Insert into CUSTOMER values(3,'Lei');
+Insert into CUSTOMER values(4,'Cody');
+
+Insert into Transaction values(1001,1,500,'2025-01-15');
+Insert into Transaction values(1002,1,150,'2025-02-10');
+Insert into Transaction values(1003,1,150,'2025-02-05');
+Insert into Transaction values(1004,1,200,'2024-12-31');
+Insert into Transaction values(1005,1,110,'2024-11-30');
+
+Insert into Transaction values(1006,2,120,'2025-01-30');
+Insert into Transaction values(1007,2,140,'2025-02-20');
+Insert into Transaction values(1008,2,150,'2025-02-05');
+Insert into Transaction values(1009,2,200,'2024-12-09');
+Insert into Transaction values(1010,2,500,'2024-11-29');
+
+Insert into Transaction values(1011,3,55,'2025-02-30');
+
+Insert into Transaction values(1012,4,105,'2025-02-17');
+
+
