@@ -72,7 +72,7 @@ public class RewardsServiceImpl implements RewardsService {
 
 	/**
 	 * Determines reward points based on transaction amount. 
-	 * @param transaction The transaction object.
+	 * @param t The transaction object.
 	 * @return Reward points earned for the given transaction. 
 	 */
 	private Long calculateRewards(Transaction t) {
@@ -88,7 +88,7 @@ public class RewardsServiceImpl implements RewardsService {
 
 	/**
 	 * Gets a timestamp based on an offset in days. 
-	 * @param daysOffset Number of days to subtract from the current date.
+	 * @param days Number of days to subtract from the current date.
 	 * @return timestamp representing the calculated date. 
 	 */
 	public Timestamp getDateBasedOnOffSetDays(int days) {
