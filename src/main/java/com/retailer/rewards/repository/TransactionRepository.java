@@ -20,4 +20,7 @@ public interface TransactionRepository extends JpaRepository<Transaction,Long> {
     public List<Transaction> findAllByCustomerId(Long customerId);
 
     public List<Transaction> findAllByCustomerIdAndTransactionDateBetween(Long customerId, Timestamp from,Timestamp to);
+    
+    boolean existsByCustomerId(Long customerId);
+
 }

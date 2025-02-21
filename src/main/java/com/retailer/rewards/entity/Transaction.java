@@ -25,6 +25,16 @@ public class Transaction {
     @Column(name = "AMOUNT")
     private Double transactionAmount;
 
+    // Default constructor (required by JPA)
+    public Transaction() {
+    }
+
+    // Parameterized constructor
+    public Transaction(Long customerId, Double transactionAmount, Timestamp transactionDate) {
+        this.customerId = customerId;
+        this.transactionAmount = transactionAmount;
+        this.transactionDate = transactionDate;
+    }
 
     public Long getTransactionId() {
 		return transactionId;

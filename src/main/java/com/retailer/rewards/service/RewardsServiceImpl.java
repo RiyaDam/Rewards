@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 
 import com.retailer.rewards.constants.Constants;
 import com.retailer.rewards.entity.Transaction;
+import com.retailer.rewards.exception.CustomerNotFoundException;
 import com.retailer.rewards.exception.NullInputException;
 import com.retailer.rewards.exception.TransactionNotFoundException;
 import com.retailer.rewards.model.Rewards;
@@ -46,6 +47,10 @@ public class RewardsServiceImpl implements RewardsService {
 		if(customerId == null) {
 			throw new NullInputException("Customer ID cannot be null");
 		}
+		
+		if (!transactionRepository.existsByCustomerId(customerId)) {
+	        throw new CustomerNotFoundException("Customer ID " + customerId + " not found.");
+	    }
 
 		Map<String, Long> monthlyRewards = new LinkedHashMap<>();
 		long totalRewards = 0L;
