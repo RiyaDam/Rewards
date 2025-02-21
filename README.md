@@ -7,8 +7,9 @@ Given a record of every transaction during a three month period, calculate the r
 ## Tech Stack
 - Java 17
 - Spring Boot
-- Hibernate
+- JPA/Hibernate
 - H2
+- JUnit Test Cases
 
 ## API Details
 - URL:
