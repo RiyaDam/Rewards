@@ -10,6 +10,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.retailer.rewards.entity.Transaction;
 
+/**
+ * Repository interface for performing CRUD operations on the {@link Transaction} entity.
+ * Extends {@link JpaRepository} to provide built-in database interaction methods.
+ */
 @Repository
 @Transactional
 public interface TransactionRepository extends JpaRepository<Transaction,Long> {

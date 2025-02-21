@@ -4,6 +4,9 @@ import java.sql.Timestamp;
 
 import jakarta.persistence.*;
 
+/**
+ * Represents a transaction in the rewards system.
+ */
 @Entity
 @Table(name = "TRANSACTION")
 @Access(AccessType.FIELD)
@@ -20,7 +23,7 @@ public class Transaction {
     private Timestamp transactionDate;
 
     @Column(name = "AMOUNT")
-    private double transactionAmount;
+    private Double transactionAmount;
 
 
     public Long getTransactionId() {
@@ -47,11 +50,11 @@ public class Transaction {
         this.transactionDate = transactionDate;
     }
 
-    public double getTransactionAmount() {
+    public Double getTransactionAmount() {
         return transactionAmount;
     }
 
-    public void setTransactionAmount(double transactionAmount) {
+    public void setTransactionAmount(Double transactionAmount) {
         this.transactionAmount = transactionAmount;
     }
 }

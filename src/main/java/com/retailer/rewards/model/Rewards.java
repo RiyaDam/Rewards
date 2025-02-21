@@ -1,51 +1,37 @@
 package com.retailer.rewards.model;
 
+import java.util.Map;
+
+/**
+ * Model class representing rewards earned by a customer.
+ */
 public class Rewards {
-    private long customerId;
-	private long lastMonthRewardPoints;
-    private long lastSecondMonthRewardPoints;
-    private long lastThirdMonthRewardPoints;
-    private long totalRewards;
 
-    public long getCustomerId() {
-        return customerId;
-    }
+	private Long customerId;
+	private Map<String, Long> points;
+	private Long totalRewards;
 
-    public long getLastMonthRewardPoints() {
-		return lastMonthRewardPoints;
+	public Long getCustomerId() {
+		return customerId;
 	}
 
-	public void setLastMonthRewardPoints(long lastMonthRewardPoints) {
-		this.lastMonthRewardPoints = lastMonthRewardPoints;
+	public void setCustomerId(Long customerId) {
+		this.customerId = customerId;
 	}
 
-	public long getLastSecondMonthRewardPoints() {
-		return lastSecondMonthRewardPoints;
+	public Map<String, Long> getPoints() {
+		return points;
 	}
 
-	public void setLastSecondMonthRewardPoints(long lastSecondMonthRewardPoints) {
-		this.lastSecondMonthRewardPoints = lastSecondMonthRewardPoints;
+	public void setPoints(Map<String, Long> points) {
+		this.points = points;
 	}
 
-	public long getLastThirdMonthRewardPoints() {
-		return lastThirdMonthRewardPoints;
+	public Long getTotalRewards() {
+		return totalRewards;
 	}
 
-	public void setLastThirdMonthRewardPoints(long lastThirdMonthRewardPoints) {
-		this.lastThirdMonthRewardPoints = lastThirdMonthRewardPoints;
+	public void setTotalRewards(Long totalRewards) {
+		this.totalRewards = totalRewards;
 	}
-
-	public void setCustomerId(long customerId) {
-        this.customerId = customerId;
-    }
-
-    
-
-    public long getTotalRewards() {
-        return totalRewards;
-    }
-
-    public void setTotalRewards(long totalRewards) {
-        this.totalRewards = totalRewards;
-    }
 }

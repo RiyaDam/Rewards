@@ -2,6 +2,9 @@ package com.retailer.rewards.entity;
 
 import jakarta.persistence.*;
 
+/**
+ * Represents a customer in the system.
+ */
 @Entity
 @Table(name = "CUSTOMER")
 @Access(AccessType.FIELD)
