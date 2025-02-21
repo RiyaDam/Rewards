@@ -17,4 +17,4 @@ Given a record of every transaction during a three month period, calculate the r
 - Method: GET
 - Response:
   * 200 OK: Returns reward details for the customer.
-  * 404 Not Found: If the customer ID is ivalid/missing.
+  * 404 Not Found: If the customer ID is invalid/missing.
