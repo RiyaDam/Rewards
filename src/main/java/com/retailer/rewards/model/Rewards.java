@@ -1,5 +1,6 @@
 package com.retailer.rewards.model;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -10,7 +11,7 @@ public class Rewards {
 	private Long customerId;
 	private Map<String, Long> points;
 	private Long totalRewards;
-
+	
 	public Long getCustomerId() {
 		return customerId;
 	}

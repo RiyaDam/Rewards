@@ -25,6 +25,11 @@ public class RewardsController {
     @Autowired
     CustomerRepository customerRepository;
 
+    public RewardsController(RewardsService rewardsService, CustomerRepository customerRepository) {
+        this.rewardsService = rewardsService;
+        this.customerRepository = customerRepository;
+    }
+    
     @GetMapping(value = "/{customerId}/rewards",produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Rewards> getRewardsByCustomerId(@PathVariable("customerId") Long customerId){
         Customer customer = customerRepository.findByCustomerId(customerId);

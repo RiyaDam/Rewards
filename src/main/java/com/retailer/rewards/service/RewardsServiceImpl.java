@@ -20,6 +20,7 @@ import com.retailer.rewards.exception.CustomerNotFoundException;
 import com.retailer.rewards.exception.NullInputException;
 import com.retailer.rewards.exception.TransactionNotFoundException;
 import com.retailer.rewards.model.Rewards;
+import com.retailer.rewards.repository.CustomerRepository;
 import com.retailer.rewards.repository.TransactionRepository;
 
 /**
@@ -33,6 +34,9 @@ public class RewardsServiceImpl implements RewardsService {
 	
 	@Autowired
 	TransactionRepository transactionRepository;
+	
+	@Autowired
+	CustomerRepository customerRepository;
 	
 	/**
      * Retrieves and calculates the reward points for a given customer based on transaction history.
@@ -48,7 +52,7 @@ public class RewardsServiceImpl implements RewardsService {
 			throw new NullInputException("Customer ID cannot be null");
 		}
 		
-		if (!transactionRepository.existsByCustomerId(customerId)) {
+		if (!customerRepository.existsById(customerId)) {
 	        throw new CustomerNotFoundException("Customer ID " + customerId + " not found.");
 	    }
 
@@ -74,7 +78,13 @@ public class RewardsServiceImpl implements RewardsService {
 
 		if (monthlyRewards.isEmpty()) {
 			logger.warn("No transactions found for customer ID: {}", customerId);
-			throw new TransactionNotFoundException("No Transactions found for customer ID: " + customerId);
+			// Return a Rewards object with 0 total rewards
+		    Rewards rewards = new Rewards();
+		    rewards.setCustomerId(customerId);
+		    rewards.setTotalRewards(0L);
+		    rewards.setPoints(monthlyRewards);
+		    
+		    return rewards;
 		} else {
 			logger.debug("Transactions fetched successfully for customer ID: {}", customerId);
 		}

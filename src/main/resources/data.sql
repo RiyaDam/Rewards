@@ -5,6 +5,7 @@ Insert into CUSTOMER values(4,'Cody');
 Insert into CUSTOMER values(5,'Sammy');
 Insert into CUSTOMER values(6,'Ron');
 Insert into CUSTOMER values(7,'Mei');
+INSERT INTO CUSTOMER values(8, 'Alice'); 
 
 Insert into TRANSACTION values(1001,1,50,'2025-01-15');
 Insert into TRANSACTION values(1002,1,10,'2025-02-10');
