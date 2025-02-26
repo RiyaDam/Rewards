@@ -13,18 +13,18 @@ Given a record of every transaction during a three month period, calculate the r
 - Maven
 
 ## Installation & Setup
-  ## Prerequisites
+## Prerequisites
 - JDK 17
 - Maven
-  ## Steps to Run:
+## Steps to Run:
   Clone the Repository:
     git clone https://github.com/RiyaDam/Rewards.git
     cd Rewards
-  ## Build the Project:
+## Build the Project:
     mvn clean install
-  ## Run the Application:
+## Run the Application:
     mvn spring-boot:run
-  ## Access API:
+## Access API:
     The application will start on http://localhost:8080
 
 ## API Details
@@ -50,7 +50,7 @@ Error Responses
   * 404 Not Found: If the customer ID is invalid/missing.
       Invalid / Missing customer Id: 10
 
-  ## Running Tests
+## Running Tests
     mvn test
   
   
