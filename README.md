@@ -28,7 +28,7 @@ Given a record of every transaction during a three month period, calculate the r
     The application will start on http://localhost:8080
 
 ## API Details
-Get Reward Points for a Customer
+## Get Reward Points for a Customer
 - URL:
   http://localhost:8080/customers/{customerId}/rewards
 - Method: GET
@@ -46,7 +46,7 @@ Get Reward Points for a Customer
     },
     "totalRewards": 300
   }
-Error Responses
+## Error Responses
   * 404 Not Found: If the customer ID is invalid/missing.
       Invalid / Missing customer Id: 10
 
