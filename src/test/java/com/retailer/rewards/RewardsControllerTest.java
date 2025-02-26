@@ -5,6 +5,8 @@ import com.retailer.rewards.entity.Customer;
 import com.retailer.rewards.exception.CustomerNotFoundException;
 import com.retailer.rewards.model.Rewards;
 import com.retailer.rewards.service.RewardsService;
+
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -29,10 +31,11 @@ public class RewardsControllerTest {
 
     // Positive Test: Valid Customer ID
     @Test
+    @DisplayName("Test Get Rewards by Customer ID - Success")
     public void testGetRewardsByCustomerId_Success() {
         // Mock data
         Long customerId = 1L;
-        Customer mockCustomer = new Customer(customerId, "Alice");
+        Customer mockCustomer = new Customer(customerId, "John");
         Rewards mockRewards = new Rewards();
         
         // Mock behavior
@@ -50,6 +53,7 @@ public class RewardsControllerTest {
 
     // Negative Test: Customer Not Found (Invalid ID)
     @Test
+    @DisplayName("Test Get Rewards by Customer ID - Customer Not Found")
     public void testGetRewardsByCustomerId_CustomerNotFound() {
         // Mock behavior: Customer ID does not exist
         Long customerId = 999L;
@@ -66,10 +70,11 @@ public class RewardsControllerTest {
 
     // Negative Test: Service Failure/Internal Server Error
     @Test
+    @DisplayName("Test Get Rewards by Customer ID - Internal server Error")
     public void testGetRewardsByCustomerId_InternalServerError() {
         // Mock data
         Long customerId = 2L;
-        Customer mockCustomer = new Customer(customerId, "Bob");
+        Customer mockCustomer = new Customer(customerId, "Edward");
 
         // Mock behavior
         when(customerRepository.findByCustomerId(customerId)).thenReturn(mockCustomer);
