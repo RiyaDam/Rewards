@@ -36,7 +36,7 @@ Given a record of every transaction during a three month period, calculate the r
 - Example Request:
   GET http://localhost:8080/customers/1/rewards
 - Response:
-  * 200 OK: Returns reward details for the customer.
+  ## 200 OK: Returns reward details for the customer.
   {
     "customerId": 1,
     "points": {
@@ -47,7 +47,7 @@ Given a record of every transaction during a three month period, calculate the r
     "totalRewards": 300
   }
 ## Error Responses
-  * 404 Not Found: If the customer ID is invalid/missing.
+  ## 404 Not Found: If the customer ID is invalid/missing.
       Invalid / Missing customer Id: 10
 
 ## Running Tests
