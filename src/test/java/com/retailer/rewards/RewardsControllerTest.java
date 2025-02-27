@@ -17,6 +17,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import org.springframework.http.MediaType;
 
+/**
+ * Unit tests for the RewardsController class.
+ * These tests validate the API endpoints for fetching customer rewards
+ * using MockMvc and Mockito.
+ */
 @SpringBootTest
 @AutoConfigureMockMvc
 public class RewardsControllerTest {
