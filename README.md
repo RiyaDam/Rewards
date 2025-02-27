@@ -18,8 +18,8 @@ Given a record of every transaction during a three month period, calculate the r
 - Maven
 ## Steps to Run:
   Clone the Repository:
-    git clone https://github.com/RiyaDam/Rewards.git
-    cd Rewards
+   - git clone https://github.com/RiyaDam/Rewards.git
+   - cd Rewards
 ## Build the Project:
     mvn clean install
 ## Run the Application:
@@ -48,7 +48,7 @@ Given a record of every transaction during a three month period, calculate the r
   }
 ## Error Responses
   ## 404 Not Found: If the customer ID is invalid/missing.
-      Invalid / Missing customer Id: 10
+      Invalid / Missing customer Id: 999
 
 ## Running Tests
     mvn test
